@@ -9,7 +9,7 @@ use serde_repr::{Deserialize_repr, Serialize_repr};
 use std::str::FromStr;
 
 #[cfg(feature = "openssl")]
-mod openssl;
+pub mod openssl;
 
 #[cfg(feature = "openssl")]
 pub use self::openssl::Openssl;

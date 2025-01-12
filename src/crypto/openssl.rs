@@ -1,3 +1,5 @@
+//! OpenSSL functions wrappers implementation for cryptography
+
 use super::{Decryption, Encryption, EncryptionAlgorithm, Entropy, Hash, MessageDigest};
 use crate::error::CoseError;
 use openssl::symm::Cipher;

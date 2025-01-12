@@ -444,6 +444,9 @@ impl CoseSign1 {
     pub fn get_unprotected(&self) -> &HeaderMap {
         &self.unprotected
     }
+
+    /// Get the signature for the COSE document.
+    pub fn get_signature(&self) -> Vec<u8> { self.signature.to_vec() }
 }
 
 #[cfg(test)]
