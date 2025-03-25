@@ -18,6 +18,9 @@ impl HeaderMap {
         HeaderMap(BTreeMap::new())
     }
 
+    /// Returns inner BTreeMap structure containing CBOR Values
+    pub fn into_inner(&self) -> BTreeMap<CborValue, CborValue> { self.0.clone() }
+
     /// Inserts an element into HeaderMap. Both key and value are CborValue.
     /// If key already has a value, that value is returned.
     pub fn insert(&mut self, key: CborValue, value: CborValue) -> Option<CborValue> {
