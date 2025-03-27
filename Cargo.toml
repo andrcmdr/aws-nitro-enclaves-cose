@@ -15,10 +15,10 @@ serde_cbor = { version="0.11", features = ["tags"] }
 serde_repr = "0.1"
 serde_bytes = { version = "0.11", features = ["std"] }
 serde_with = { version = "3.3" }
-openssl = { version = "0.10.70", optional = true }
+openssl = { version = "0.10", optional = true }
 tss-esapi = { version = "7.5.1", optional = true }
 aws-sdk-kms = { version = "<=1.22", optional = true }
-tokio = { version = "1.20", features = ["rt", "macros"], optional = true }
+tokio = { version = "1.44", features = ["rt", "macros"], optional = true }
 
 [dependencies.serde]
 version = "1.0"
@@ -30,7 +30,7 @@ aws-config = { version = "<=1.5" }
 aws-sdk-sso = { version = "<= 1.21.0" }
 aws-sdk-ssooidc = { version = "<= 1.21.0" }
 aws-sdk-sts = { version = "<= 1.21.0" }
-aws-smithy-runtime = { version = "<=1.6" }
+aws-smithy-runtime = { version = "<=1.8" }
 
 [features]
 default = ["key_openssl_pkey"]
